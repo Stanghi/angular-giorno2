@@ -2,7 +2,7 @@
   <span>
     <h2>Persone</h2>
     <button mat-button mat-dialog-close mat-raised-button color="warn">
-      Chiudi
+      <i class="fa-solid fa-xmark"></i>
     </button>
   </span>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -53,7 +53,7 @@
           color="primary"
           (click)="onClick(element)"
         >
-          Click
+          <i class="fa-solid fa-terminal"></i>
         </button>
       </td>
     </ng-container>
