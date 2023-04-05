@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { ModalComponent } from './components/modal/modal.component';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'angular-giorno2';
+
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(
+    enterAnimationDuration: string,
+    exitAnimationDuration: string
+  ): void {
+    this.dialog.open(ModalComponent, {
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
 
   person = {
     nome: 'Mattia',
